@@ -16,6 +16,115 @@
 @media(max-width:760px){.sidebar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:5px}.nav-link{flex-direction:column;justify-content:center;gap:4px;padding:9px 4px;min-height:64px;font-size:.75rem;white-space:nowrap}.next-card{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:start}.next-content{min-width:0}.next-card>a{grid-column:2;margin-left:0}.hero p br{display:none}}
 @media(max-width:480px){.service-grid{grid-template-columns:1fr}.service-card{min-height:174px}.service-top{margin-bottom:10px}.service-card h3{font-size:1.08rem}.service-card p{font-size:.85rem}}
 @media print{.app-header,.sidebar,.breadcrumb,.footer,.actions,.font-tools,#toast,.no-print,.booking-picker{display:none!important}.layout{display:block}.main{padding:0}.panel{border:0;padding:0}.print-only{display:block}.guide-steps li{font-size:26px}.notice{background:white;border:1px solid #bbb}}
+
+/* Phone layout. Desktop styling remains in style.css. */
+.mobile-bottom-nav{display:none}
+.mobile-menu-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.mobile-menu-heading h2{margin:0}
+.mobile-menu-close{border:1px solid var(--line);border-radius:12px;background:white;min-width:48px;min-height:48px;font:inherit;font-size:1.3rem;line-height:1}
+.mobile-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mobile-menu-grid a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:100px;background:white;border:1px solid var(--line);border-radius:15px;text-align:center;padding:15px 8px;font-size:.9rem;font-weight:700}
+.mobile-menu-grid a.active{border-color:var(--orange);color:var(--orange);background:var(--peach)}
+.mobile-menu-grid .icon{width:28px;height:28px}
+
+@media screen and (max-width:760px){
+  body{padding-bottom:calc(94px + env(safe-area-inset-bottom,0px))}
+  .app-header{position:sticky;top:0;z-index:20;min-height:80px;gap:10px;padding:12px 14px;flex-wrap:nowrap;box-shadow:0 3px 16px #302d2906}
+  .brand{font-size:.86rem;gap:9px;min-width:0;line-height:1.45}
+  .brand-symbol{width:36px;height:40px;border-radius:12px;flex-shrink:0}
+  .brand-symbol .icon{width:25px;height:25px}
+  .brand small{font-size:10px;letter-spacing:.03em;margin-top:4px;white-space:nowrap}
+  .header-tools{gap:0}
+  .font-tools{gap:4px;flex-shrink:0}
+  .font-tools>span{display:none}
+  .font-tools button{min-height:44px;min-width:40px;padding:4px;font-size:14px;border-radius:10px}
+  .layout{min-height:calc(100dvh - 80px);display:block}
+  .sidebar{display:none}
+  .main{padding:22px 16px 18px}
+  .breadcrumb{font-size:.7rem;margin:0 0 18px}
+  .page-title{margin-bottom:20px}
+  .page-title h1{font-size:1.55rem;line-height:1.45}
+  .page-title p{font-size:.86rem;line-height:1.8;margin-top:8px}
+  .hero{display:block;padding:25px 23px;border-radius:24px}
+  .hero .eyebrow{font-size:.68rem;margin-bottom:14px;letter-spacing:.03em}
+  .hero h1{font-size:clamp(1.35rem,6.5vw,1.65rem);line-height:1.55;margin-bottom:12px;letter-spacing:-.03em}
+  .hero p{font-size:.85rem;line-height:1.85;max-width:none}
+  .hero p br{display:none}
+  .hero-illustration{display:none}
+  .hero .btn{display:flex;min-height:60px;width:100%;margin-top:23px;padding:14px 12px;font-size:.94rem;border-radius:15px}
+  .hero .btn .icon:last-child{margin-left:auto}
+  .hero .btn .icon:first-child{margin-right:auto}
+  .next-card{display:grid;grid-template-columns:44px minmax(0,1fr);padding:18px;gap:10px 12px;margin-top:16px;border-radius:18px;align-items:start}
+  .next-card .next-icon{width:44px;height:44px}
+  .next-content{min-width:0}
+  .next-content small{font-size:.67rem;margin-bottom:3px}
+  .next-content strong{font-size:.86rem;line-height:1.8}
+  .next-card>a{grid-column:2;margin-left:0;font-size:.76rem;min-height:44px}
+  .section-head{margin:25px 0 14px}
+  .section-head h2{font-size:1.12rem}
+  .section-head small{display:none}
+  .service-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .service-card{display:grid;grid-template-columns:52px minmax(0,1fr) 20px;gap:4px 13px;padding:18px;min-height:132px;border-radius:18px;align-items:start}
+  .service-top{display:contents}
+  .service-top>span:first-child{grid-column:1;grid-row:1/4;align-self:center;width:52px;height:52px;padding:13px;border-radius:15px}
+  .service-top .step-num{grid-column:2;grid-row:1;font-size:.58rem;letter-spacing:.06em;line-height:1.5;margin-bottom:2px;align-self:end}
+  .service-card h3{grid-column:2;grid-row:2;font-size:1.05rem;line-height:1.5}
+  .service-card p{grid-column:2;grid-row:3;font-size:.78rem;line-height:1.7;margin:0}
+  .service-card .card-foot{grid-column:3;grid-row:1/4;align-self:center;justify-content:center;margin:0;padding:0;font-size:0}
+  .service-card .card-foot .icon{width:20px;height:20px}
+  .panel{padding:23px 18px;border-radius:19px;margin-bottom:16px}
+  .panel h2{font-size:1.12rem}
+  .fields{grid-template-columns:minmax(0,1fr);gap:19px;margin-top:19px}
+  .field{gap:9px}
+  .field.full{grid-column:auto}
+  label,.field-label{font-size:.9rem;line-height:1.7}
+  input:not([type=checkbox]):not([type=radio]),select,textarea{font-size:max(17px,.9rem);min-height:59px;padding:14px 12px;border-radius:12px;scroll-margin-top:100px}
+  textarea{min-height:120px}
+  .choices{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+  .choice{justify-content:flex-start;text-align:left;white-space:normal;font-size:.94rem;min-height:60px;padding:14px 16px;gap:13px}
+  input[type=checkbox],input[type=radio]{width:25px;height:25px}
+  .check-row{font-size:.9rem;gap:12px;line-height:1.8}
+  .check-row.practice{min-height:66px;padding:16px 13px}
+  .actions{display:grid;grid-template-columns:minmax(0,1fr);gap:11px;margin-top:23px}
+  .actions .btn{width:100%;min-height:59px;font-size:.94rem;padding:14px 12px}
+  .hint{font-size:.75rem;line-height:1.9}
+  .notice{font-size:.84rem;padding:17px;line-height:1.9;border-radius:14px}
+  .empty{padding:35px 20px}
+  .empty h2{font-size:1.2rem}
+  .empty p{font-size:.87rem;line-height:1.9}
+  .empty .btn{width:100%;min-height:60px}
+  .booking-picker{gap:10px;align-items:stretch;margin-bottom:19px;font-size:.82rem}
+  .booking-picker>label{font-size:.76rem}
+  .booking-picker select{margin-top:7px;max-width:none;font-size:.8rem;white-space:normal}
+  .detail-grid{grid-template-columns:minmax(0,1fr);gap:15px}
+  .detail dd{font-size:.94rem;line-height:1.8}
+  .detail dt{font-size:.76rem}
+  .guide-steps li{font-size:1.04rem;line-height:1.9;gap:12px;overflow-wrap:anywhere}
+  .guide-steps li:before{width:35px;height:35px;margin-top:4px}
+  .warranty{padding:24px 20px;border-radius:19px}
+  .warranty .terms{font-size:.85rem}
+  summary{font-size:.93rem;min-height:56px;line-height:1.8}
+  .footer{padding:20px 0 14px;gap:9px;font-size:.64rem;line-height:1.9;flex-direction:column;align-items:center;text-align:center}
+  #toast{bottom:calc(98px + env(safe-area-inset-bottom,0px));font-size:.85rem;line-height:1.7;max-width:calc(100% - 32px);text-align:center}
+  .mobile-bottom-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:fixed;z-index:30;bottom:0;left:0;right:0;gap:6px;padding:9px 12px calc(9px + env(safe-area-inset-bottom,0px));background:#fffefb;border-top:1px solid var(--line);box-shadow:0 -5px 24px #302d2909}
+  .mobile-bottom-nav a,.mobile-bottom-nav button{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:62px;border-radius:13px;padding:7px 3px;color:var(--muted);font-size:.76rem;line-height:1.5;font-weight:700}
+  .mobile-bottom-nav .icon{width:24px;height:24px}
+  .mobile-bottom-nav .active{color:var(--orange);background:var(--peach)}
+  dialog.mobile-menu{padding:22px 18px;max-height:80dvh;border-radius:24px;width:calc(100% - 28px);max-width:480px}
+  .mobile-menu-grid{gap:10px}
+  .mobile-menu-grid a{min-height:104px;font-size:.9rem}
+}
+
+@media screen and (max-width:359px){
+  .app-header{flex-wrap:wrap;justify-content:space-between;gap:9px;padding:12px}
+  .brand{font-size:.85rem}
+  .main{padding-left:12px;padding-right:12px}
+  .hero{padding:23px 20px}
+  .service-card{grid-template-columns:44px minmax(0,1fr) 16px;gap:4px 10px;padding:16px 13px}
+  .service-top>span:first-child{width:44px;height:48px;padding:11px}
+}
+
+@media print{.mobile-bottom-nav,.mobile-menu{display:none!important}body{padding-bottom:0}}
 </style>
 </head>
 <body>
@@ -63,7 +172,7 @@ records = records.filter(validRecord).slice(0,100);
 function empty() { return `<div class="empty">${icon('calendar')}<h2>先留下您的服務需求</h2><p>記下家電與服務需求，一步一步整理好。</p><a class="btn" href="#book">填寫服務需求 ${icon('arrow')}</a></div>`; }
 function picker() { return current() ? `<div class="booking-picker"><span>目前查看：${esc(current().name)}的${esc(current().appliance)}</span><label>切換服務紀錄<select id="select-record">${records.map(r=>`<option value="${esc(r.id)}" ${r.id===current().id?'selected':''}>${esc(r.name)} · ${esc(r.appliance)} · ${esc(r.date)}</option>`).join('')}</select></label></div>` : ''; }
 function home() {
-  return `<section class="hero"><div><div class="eyebrow"><span class="dot"></span>您的家電，我們一起照顧</div><h1>您好，今天需要<br>我們幫忙嗎？</h1><p>從服務需求到操作筆記，一步一步慢慢來。<br>每一個生活小問題，都值得好好照顧。</p><a class="btn" href="#book">${icon('calendar')}填寫服務需求 ${icon('arrow')}</a></div><div class="hero-illustration">${illustration}</div></section><div class="next-card"><div class="next-icon">${icon('leaf')}</div><div class="next-content"><small>我的服務紀錄</small><strong>${records.length?`已儲存 ${records.length} 筆服務需求`:'還沒有服務紀錄，先告訴我們您的需求。'}</strong></div><a href="#backup">匯出／匯入備份 ${icon('chevron')}</a></div><div class="section-head"><h2>您需要哪一種幫忙？</h2><small>點一下，就能開始</small></div><div class="service-grid">${STEPS.map((s,i)=>`<a class="service-card" href="#${s[0]}"><div class="service-top"><span>${icon(s[2])}</span><span class="step-num">STEP 0${i+1}</span></div><h3>${s[1]}</h3><p>${['整理家電與到府服務需求','記錄偏好與家中環境','查看已確認的來訪資訊','保存已確認型號的操作筆記','整理保固資料與求助筆記'][i]}</p><div class="card-foot">前往查看 ${icon('arrow')}</div></a>`).join('')}<a class="service-card support" href="#backup"><div class="service-top"><span>${icon('people')}</span><span class="step-num">保存資料</span></div><h3>資料備份</h3><p>妥善保存重要的服務紀錄</p><div class="card-foot">備份與使用說明 ${icon('arrow')}</div></a></div>`;
+  return `<section class="hero"><div><div class="eyebrow"><span class="dot"></span>您的家電，我們一起照顧</div><h1>您好，今天需要<br>我們幫忙嗎？</h1><p>從服務需求到操作筆記，一步一步慢慢來。<br>每一個生活小問題，都值得好好照顧。</p><a class="btn" href="#book">${icon('calendar')}填寫服務需求 ${icon('arrow')}</a></div><div class="hero-illustration">${illustration}</div></section><div class="next-card"><div class="next-icon">${icon('leaf')}</div><div class="next-content"><small>我的服務紀錄</small><strong>${records.length?`已儲存 ${records.length} 筆服務需求`:'還沒有服務紀錄，先告訴我們您的需求。'}</strong></div><a href="#backup">匯出／匯入備份 ${icon('chevron')}</a></div><div class="section-head"><h2>您需要哪一種幫忙？</h2><small>點一下，就能開始</small></div><div class="service-grid">${STEPS.map((s,i)=>`<a class="service-card" href="#${s[0]}"><div class="service-top"><span>${icon(s[2])}</span><span class="step-num">STEP 0${i+1}</span></div><h3>${s[1]}</h3><p>${['整理家電與到府服務需求','記錄偏好與家中環境','查看門市確認的來訪資訊','保存已確認型號的操作筆記','整理保固資料與求助筆記'][i]}</p><div class="card-foot">前往查看 ${icon('arrow')}</div></a>`).join('')}<a class="service-card support" href="#backup"><div class="service-top"><span>${icon('people')}</span><span class="step-num">保存資料</span></div><h3>資料備份</h3><p>妥善保存重要的服務紀錄</p><div class="card-foot">備份與使用說明 ${icon('arrow')}</div></a></div>`;
 }
 function book() {
   return heading('預約諮詢','告訴我們您的需求與方便的時間。')+`<form id="booking-form" class="panel"><h2>您的服務需求</h2><div class="fields">${field('稱呼 *','name','','text','required maxlength="40" autocomplete="name"')}${field('聯絡電話 *','phone','','tel','required maxlength="20" autocomplete="tel"')}${textarea('到府地址 *','address','','required maxlength="200"')}${field('希望日期 *','date','','date',`required min="${localDay()}"`)}${field('廠牌型號（選填）','model','','text','maxlength="100"')}</div><div class="form-section"><h3>習慣說什麼話？</h3>${radio('language',['國語','台語','客語'],'國語')}</div><div class="form-section"><h3>哪一台家電需要幫忙？</h3>${radio('appliance',['電鍋','電風扇','除濕機','電話機'],'電鍋')}</div><div class="form-section"><h3>方便的時間</h3>${radio('slot',['上午 9–11 點','下午 2–4 點'],'下午 2–4 點')}</div><div class="actions"><button class="btn" type="submit">${icon('check')}儲存服務需求</button></div></form>`;
@@ -73,8 +182,8 @@ function preferences() {
   return heading('我的習慣','記下偏好，與門市聯絡時可以一起告訴對方。')+`<form id="preferences-form" class="panel"><h2>希望服務人員多留意什麼？</h2><div class="choices">${preferencesList.map(p=>`<label class="choice"><input type="checkbox" name="prefs" value="${p}" ${b.prefs.includes(p)?'checked':''}>${p}</label>`).join('')}</div><div class="fields">${textarea('家中環境與想告訴門市的事','environment',b.environment,'maxlength="1000"')}</div><div class="actions"><button class="btn" type="submit">儲存我的習慣</button></div></form>`;
 }
 function visit() {
-  const b=current();if(!b)return empty();const v=b.visit||{};
-  return heading('師傅來訪','把已確認的日期、時間與師傅姓名記清楚。')+`<div class="panel"><h2>您的服務資訊</h2><dl class="detail-grid">${detail('您的稱呼',b.name)}${detail('家電',b.appliance)}${detail('希望日期',b.date)}${detail('方便時段',b.slot)}${detail('聯絡電話',b.phone)}${detail('服務地址',b.address)}</dl></div><form id="visit-form" class="panel"><h2>已確認的來訪資訊</h2><p class="hint">請依與門市確認的內容填寫，尚未確認的欄位可先留空。</p><div class="fields">${field('門市／聯絡人','store',v.store||'','text','maxlength="100"')}${field('師傅姓名','technician',v.technician||'','text','maxlength="40"')}${field('確認來訪日期','date',v.date||'','date')}${field('確認來訪時間','time',v.time||'','time')}${textarea('聯絡與來訪備註','note',v.note||'','maxlength="2000"')}</div><div class="notice warm">開門前，請先與門市確認師傅姓名並核對證件。</div><div class="actions"><button class="btn" type="submit">儲存來訪筆記</button></div></form>`;
+  const b=current();if(!b)return empty();
+  return heading('師傅來訪','來訪時間與師傅資訊，由門市確認後提供。')+`<section class="panel"><h2>已確認的來訪資訊</h2><div class="notice"><strong>待門市安排</strong>門市確認後，這裡會顯示師傅姓名、來訪日期與時間，您不需要自行填寫。</div><div class="notice warm">開門前，請先核對師傅證件與門市提供的姓名。</div></section><section class="panel"><h2>您的服務需求</h2><dl class="detail-grid">${detail('您的稱呼',b.name)}${detail('家電',b.appliance)}${detail('希望日期',b.date)}${detail('方便時段',b.slot)}${detail('聯絡電話',b.phone)}${detail('服務地址',b.address)}</dl></section>`;
 }
 function learn() {
   const b=current();if(!b)return empty();const g=b.guide||{};
@@ -92,7 +201,7 @@ function render() {
   page=location.hash.slice(1);if(!pages[page])page='index';
   document.documentElement.style.fontSize=size+'px';
   const nav=[['index','服務首頁','home'],...STEPS.map(s=>[s[0],s[1],s[2]]),['backup','資料備份','shield']];
-  $('#app').innerHTML=`<a class="skip" href="#main-content">跳到主要內容</a><header class="app-header"><a class="brand" href="#index"><span class="brand-symbol">${icon('home')}</span><span>樂齡家電守護<small>用心陪伴・安心生活</small></span></a><div class="font-tools" role="group" aria-label="文字大小"><span>文字大小</span>${[['20','標準'],['23','大'],['26','特大']].map(([n,t])=>`<button data-size="${n}" class="${n===size?'active':''}" aria-pressed="${n===size}">${t}</button>`).join('')}</div></header><div class="layout"><nav class="sidebar" aria-label="主要選單"><p class="nav-caption">陪您一步一步來</p>${nav.map(s=>`<a class="nav-link ${page===s[0]?'active':''}" href="#${s[0]}" ${page===s[0]?'aria-current="page"':''}>${icon(s[2])}<span>${s[1]}</span></a>`).join('')}<div class="side-note">${icon('heart')}<strong>不用急，慢慢來。</strong>有看不懂的地方，<br>隨時請家人或門市幫忙。</div></nav><main class="main" id="main-content">${page!=='index'&&page!=='book'&&page!=='backup'&&page!=='help'?picker():''}${pages[page]()}<footer class="footer"><span>樂齡家電守護 · 每一步，都有我們陪您</span><a href="#backup">資料備份與使用說明</a></footer></main></div><div id="toast" role="status" aria-live="polite"></div>`;
+  $('#app').innerHTML=`<a class="skip" href="#main-content">跳到主要內容</a><header class="app-header"><a class="brand" href="#index"><span class="brand-symbol">${icon('home')}</span><span>樂齡家電守護<small>用心陪伴・安心生活</small></span></a><div class="font-tools" role="group" aria-label="文字大小"><span>文字大小</span>${[['20','標準'],['23','大'],['26','特大']].map(([n,t])=>`<button data-size="${n}" class="${n===size?'active':''}" aria-pressed="${n===size}">${t}</button>`).join('')}</div></header><div class="layout"><nav class="sidebar" aria-label="主要選單"><p class="nav-caption">陪您一步一步來</p>${nav.map(s=>`<a class="nav-link ${page===s[0]?'active':''}" href="#${s[0]}" ${page===s[0]?'aria-current="page"':''}>${icon(s[2])}<span>${s[1]}</span></a>`).join('')}<div class="side-note">${icon('heart')}<strong>不用急，慢慢來。</strong>有看不懂的地方，<br>隨時請家人或門市幫忙。</div></nav><main class="main" id="main-content">${page!=='index'&&page!=='book'&&page!=='backup'&&page!=='help'?picker():''}${pages[page]()}<footer class="footer"><span>樂齡家電守護 · 每一步，都有我們陪您</span><a href="#backup">資料備份與使用說明</a></footer></main></div><nav class="mobile-bottom-nav no-print" aria-label="手機快捷導覽"><a href="#index" class="${page==='index'?'active':''}" ${page==='index'?'aria-current="page"':''}>${icon('home')}<span>服務首頁</span></a><a href="#book" class="${page==='book'?'active':''}" ${page==='book'?'aria-current="page"':''}>${icon('calendar')}<span>填寫需求</span></a><button type="button" data-act="mobile-menu" class="${!['index','book'].includes(page)?'active':''}" aria-label="開啟所有服務選單" aria-haspopup="dialog">${icon('prefs')}<span>所有服務</span></button></nav><dialog id="mobile-menu" class="mobile-menu" aria-labelledby="mobile-menu-title"><div class="mobile-menu-heading"><h2 id="mobile-menu-title">您需要什麼幫忙？</h2><button type="button" class="mobile-menu-close" data-act="mobile-close" aria-label="關閉選單">×</button></div><div class="mobile-menu-grid">${nav.map(s=>`<a href="#${s[0]}" data-act="mobile-link" class="${page===s[0]?'active':''}" ${page===s[0]?'aria-current="page"':''}>${icon(s[2])}<span>${s[1]}</span></a>`).join('')}</div></dialog><div id="toast" role="status" aria-live="polite"></div>`;
   document.title=(nav.find(s=>s[0]===page)?.[1]||'樂齡家電守護')+' · 樂齡家電守護';
 }
 function exportBackup(selected) {
@@ -112,6 +221,9 @@ function validRecord(r) {
 document.addEventListener('click',e=>{
   const b=e.target.closest('[data-size],[data-act]');if(!b)return;
   if(b.dataset.size){size=b.dataset.size;save();document.documentElement.style.fontSize=size+'px';document.querySelectorAll('[data-size]').forEach(el=>{el.classList.toggle('active',el.dataset.size===size);el.setAttribute('aria-pressed',String(el.dataset.size===size));});return;}
+  if(b.dataset.act==='mobile-menu'){$('#mobile-menu').showModal();return;}
+  if(b.dataset.act==='mobile-close'){$('#mobile-menu').close();return;}
+  if(b.dataset.act==='mobile-link')$('#mobile-menu').close();
   if(b.dataset.act==='print')window.print();
   if(b.dataset.act==='export-all')exportBackup(records);
   if(b.dataset.act==='export-one')exportBackup([current()]);
@@ -138,7 +250,6 @@ document.addEventListener('submit',async e=>{
     }
     if(!b)throw new Error('請先建立服務需求。');
     if(f.id==='preferences-form'){b.prefs=fd.getAll('prefs');b.environment=v.environment;}
-    if(f.id==='visit-form')b.visit=v;
     if(f.id==='guide-form'){const steps=v.steps.split('\n').map(s=>s.trim()).filter(Boolean);if(!steps.length||steps.length>6||steps.some(s=>s.length>200))throw new Error('請填寫 1 至 6 個步驟，每一步不超過 200 字。');b.guide={model:v.model,steps,warning:v.warning};}
     if(f.id==='practice-form')b.learned=Object.fromEntries(learnItems.map(([k])=>[k,fd.has(k)]));
     if(f.id==='warranty-form'){if(v.end<=v.start)throw new Error('保固迄日必須晚於起日。');b.warranty=v;}
